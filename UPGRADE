@@ -1,0 +1,5 @@
+
+To upgrade from a previous version of Send Bacula Backup Report to 0.6 you need to:
+
+* Replace send_bacula_backup_report.pl with the newest version
+* If you want to use the new "attention" feature, add "$minimum_size..." sections to your /etc/bacula/send_bacula_backup_report.conf . Learn how to configure it by reading send_bacula_backup_report.conf.example

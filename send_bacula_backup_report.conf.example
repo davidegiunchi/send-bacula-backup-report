@@ -1,0 +1,34 @@
+#
+# sample config file for Send Bacula Backup Report, copy this to /etc/bacula/send_bacula_backup_report.conf
+#
+
+# mysql or Pg
+$db_type='mysql';
+# other db parameters
+$db_host='localhost';
+$db_name='bacula';
+$db_username='root';
+$db_password='xxxxxxxx';
+# url to bweb.pl or your bacula's web interface. If you don't have a web interface, you can skip it
+$bweb_path='http://hostname.or.ip.of.the.bacula.dir/cgi-bin/bweb/bweb.pl';
+# email arguments
+$email_from='backup@domain.com';
+$email_to='ced@domain.com';
+$email_subject="Backup report of $mday/$mon/$year";
+
+$template_file='/etc/bacula/send_bacula_backup_report.tpl';
+
+# Optional: minimum job size
+# if job "my-db-job-name" is ok and its size is less than the defined one, mark the job as "ATTENTION" in the report.  This is expecially useful for jobs
+# with a pre-script that dump a database: the script may return with ok value (0) but it didn't dump the databases. This feature will make easier
+# to detect this dangerous behaviour.
+# You can define as many minimum-size-definition as you want.
+#
+# If you don't need this feature, you can simply comment that lines
+#
+# job "my-db-job-name" size must be more than 900Mb (size must be expressed in bytes)
+$minimum_size{'my-db-job-name'} = '900000000';
+# job "another-job-name" size must be more than 2Gb
+$minimum_size{'another-job-name'} = '2000000000';
+
+1

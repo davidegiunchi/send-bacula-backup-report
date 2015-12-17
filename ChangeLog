@@ -1,0 +1,21 @@
+
+12/11/2015      Davide Giunchi
+
+        * v0.6: new feature for minimum job size check
+        * subject shortening: don't print the status if the job-count is equal to zero
+        * New "ATTENTION" status type
+        * bugfix for correct detection of long-running jobs
+        * added "functions-postgresql.sql" to allow installation with gui different than bweb
+
+02/02/2012      Victor Hugo dos Santos
+
+        * v0.5: Jobs overview directly in the subject
+
+25/01/2012      Davide Giunchi
+
+        * v0.4: added support for PostgreSQL
+        * tested with Bacula Enterprise
+
+13/07/2011      Davide Giunchi
+
+        * v0.3: First pubblic release

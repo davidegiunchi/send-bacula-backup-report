@@ -1,0 +1,67 @@
+
+Steps for running Send Bacula Backup Report:
+
+1) You need a working Bacula or Bacula Enterprise with MySQL or PostgreSQL database, Bweb and a working local MTA
+
+2) Install the required Perl modules,
+
+On Debian/Ubuntu:
+
+# apt-get update
+# apt-get install libhtml-template-perl libmime-lite-perl
+If you have a MySQL db:
+# apt-get install libdbd-mysql-perl
+If you have a PostgreSQL db:
+# apt-get install libdbd-pg-perl
+
+On RedHat/CentOS:
+
+Enable the repoforge repository: http://repoforge.org/use/
+
+# yum install perl-HTML-Template perl-MIME-Lite
+If you have a MySQL db:
+# yum install perl-DBD-MySQL
+If you have a PostgreSQL db:
+# yum install perl-DBD-Pg
+
+3) install the program and configuration files
+
+# cp send_bacula_backup_report.pl /usr/bin/
+# cp send_bacula_backup_report.conf.example /etc/bacula/send_bacula_backup_report.conf
+# cp send_bacula_backup_report.tpl /etc/bacula/
+# chmod 750 /usr/bin/send_bacula_backup_report.pl
+# chmod 640 /etc/bacula/send_bacula_backup_report.conf
+
+4) Modify the configuration file:
+
+# vi /etc/bacula/send_bacula_backup_report.conf
+
+You will surely need to modify the content of that variables: db_type,db_password,bweb_path,email_from,email_to
+You can define as many "$minimum_size" rules as you want, but this is optional.
+
+5) Only if you use PostgreSQL Catalog:
+
+# su posgres "psql bacula < /path/to/send_bacula_backup_report-src/functions-postgresql.sql"
+
+6) Try if it works correct:
+
+# /usr/bin/send_bacula_backup_report.pl 1
+
+then check you email
+
+7) Enable daily email report via crontab, add the following lines to /etc/crontab:
+
+# /usr/bin/send_bacula_backup_report.pl 1
+
+then check you email
+
+7) Enable daily email report via crontab, add the following lines to /etc/crontab:
+
+---
+# send daily bacula backup report
+15 8    * * 2-5 root    /root/bin/send_bacula_backup_report.pl 1 >/dev/null
+15 8    * * 1   root    /root/bin/send_bacula_backup_report.pl 3 >/dev/null
+---
+
+This example will send a daily digest from Tuesday to Friday on the backup of the previous night. On Monday it will send a
+digest on the backup of the entire week-end.
