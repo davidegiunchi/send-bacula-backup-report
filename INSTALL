@@ -26,10 +26,10 @@ If you have a PostgreSQL db:
 
 3) install the program and configuration files
 
-# cp send_bacula_backup_report.pl /usr/bin/
+# cp send_bacula_backup_report.pl /etc/bacula/scripts/
 # cp send_bacula_backup_report.conf.example /etc/bacula/send_bacula_backup_report.conf
 # cp send_bacula_backup_report.tpl /etc/bacula/
-# chmod 750 /usr/bin/send_bacula_backup_report.pl
+# chmod 750 /etc/bacula/scripts/send_bacula_backup_report.pl
 # chmod 640 /etc/bacula/send_bacula_backup_report.conf
 
 4) Modify the configuration file:
@@ -45,13 +45,13 @@ You can define as many "$minimum_size" rules as you want, but this is optional.
 
 6) Try if it works correct:
 
-# /usr/bin/send_bacula_backup_report.pl 1
+# /etc/bacula/scripts/send_bacula_backup_report.pl 1
 
 then check you email
 
 7) Enable daily email report via crontab, add the following lines to /etc/crontab:
 
-# /usr/bin/send_bacula_backup_report.pl 1
+# /etc/bacula/scripts/send_bacula_backup_report.pl 1
 
 then check you email
 
@@ -59,8 +59,8 @@ then check you email
 
 ---
 # send daily bacula backup report
-15 8    * * 2-5 root    /root/bin/send_bacula_backup_report.pl 1 >/dev/null
-15 8    * * 1   root    /root/bin/send_bacula_backup_report.pl 3 >/dev/null
+15 8    * * 2-5 root    /etc/bacula/scripts/send_bacula_backup_report.pl 1 >/dev/null
+15 8    * * 1   root    /etc/bacula/scripts/send_bacula_backup_report.pl 3 >/dev/null
 ---
 
 This example will send a daily digest from Tuesday to Friday on the backup of the previous night. On Monday it will send a
