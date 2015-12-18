@@ -4,13 +4,18 @@
                                       https://giunchi.net/send-bacula-backup-report
 
 1 - Topic and feature of Send Bacula Backup Report
+
 2 - Various
+
 3 - Bugs
+
 4 - Thanks
+
 5 - License
 
 
  1 - TOPIC AND FEATURE OF Send Bacula Backup Report
+ 
 
 The standard "Messages" Bacula function send a separate email for every backup job, when
 you manage a large backup server this will increase the number of email and a "daily digest"
@@ -44,7 +49,9 @@ script may return with ok value (0) but it didn't dump the databases. This featu
 
 To install this program read the INSTALL file.
 
+
  2 - VARIOUS
+ 
 
 You are encourage to contribute this program, if you have patch, suggestion or
 critics please contact me.
@@ -53,11 +60,15 @@ This program has been tested with Bacula community from version 5.0.3 to 7.0.5 a
 Latest Send Bacula Backup Report version can be found at
 https://giunchi.net/send-bacula-backup-report
 
+
  3 - BUGS
+
 
 If you find a bug, send me the original mail(s) that give problem and i will analize it.
 
+
  4 - THANKS
+ 
 
 Kern Sibbald for Bacula
 Eric Bollengier for Bweb
@@ -65,7 +76,9 @@ Willy Morin for template css
 Victor Hugo dos Santos for jobs overview directly in the subject
 Every Bacula contributor
 
+
  5 - LICENSE
+ 
 
 This program is Copyright(C) 2011 Davide Giunchi, and may be copied according to
 the GNU GENERAL PUBLIC LICENSE (GPL) Version 2 or a later version.  A copy of
