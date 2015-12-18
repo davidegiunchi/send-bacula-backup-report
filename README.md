@@ -16,6 +16,7 @@
 
 
 
+
  1 - TOPIC AND FEATURE OF Send Bacula Backup Report
  
 
@@ -60,8 +61,11 @@ critics please contact me.
 This program has been tested with Bacula community from version 5.0.3 to 7.0.5 and Bacula Enterprise from 4.0.7 to 8.0.9.
 
 Latest Send Bacula Backup Report version can be found at:
+
 https://giunchi.net/send-bacula-backup-report
-Git:
+
+GIT:
+
 https://github.com/davidegiunchi/send-bacula-backup-report
 
 
@@ -69,6 +73,7 @@ https://github.com/davidegiunchi/send-bacula-backup-report
 
 
 If you find a bug, send me the original mail(s) that give problem and i will analize it.
+You can contribute via github on https://github.com/davidegiunchi/send-bacula-backup-report .
 
 
  4 - THANKS
