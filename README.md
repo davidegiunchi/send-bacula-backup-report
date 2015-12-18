@@ -14,12 +14,14 @@
 5 - License
 
 
+
+
  1 - TOPIC AND FEATURE OF Send Bacula Backup Report
  
 
 The standard "Messages" Bacula function send a separate email for every backup job, when
-you manage a large backup server this will increase the number of email and a "daily digest"
-will be better.
+you manage a network full of servers this will increase the number of daily emails, and a single "daily digest"
+will be much better.
 This is a perl program that works with Bacula, it send a digest of the backup jobs run in the last
 X days, you can run it every morning to notify about the state of every job run in the night,
 or every monday to get the state of the week-end backups.
@@ -57,8 +59,10 @@ You are encourage to contribute this program, if you have patch, suggestion or
 critics please contact me.
 This program has been tested with Bacula community from version 5.0.3 to 7.0.5 and Bacula Enterprise from 4.0.7 to 8.0.9.
 
-Latest Send Bacula Backup Report version can be found at
+Latest Send Bacula Backup Report version can be found at:
 https://giunchi.net/send-bacula-backup-report
+Git:
+https://github.com/davidegiunchi/send-bacula-backup-report
 
 
  3 - BUGS
