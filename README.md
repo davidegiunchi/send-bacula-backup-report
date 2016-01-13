@@ -1,7 +1,7 @@
   
-#Send Bacula Backup Report  
-####version 0.6 by Davide Giunchi (davide@giunchi.net)  
-####url: https://giunchi.net/send-bacula-backup-report  
+# Send Bacula Backup Report  
+#### version 0.6 by Davide Giunchi (davide@giunchi.net)  
+####. https://giunchi.net/send-bacula-backup-report  
   
   
 1. Topic and feature of Send Bacula Backup Report  
