@@ -1,7 +1,7 @@
 
 Steps for running Send Bacula Backup Report:
 
-1) You need a working Bacula or Bacula Enterprise with MySQL or PostgreSQL database, Bweb and a working local MTA
+1) You need a working Bacula or Bacula Enterprise with MySQL or PostgreSQL database and a working local MTA
 
 2) Install the required Perl modules,
 
