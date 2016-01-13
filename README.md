@@ -1,7 +1,6 @@
   
-        Send Bacula Backup Report version 0.6 by Davide Giunchi (davide@giunchi.net)  
+        Send Bacula Backup Report version 0.6 by Davide Giunchi (davide@giunchi.net)
 =======
-
                                       https://giunchi.net/send-bacula-backup-report
 -----------
 
