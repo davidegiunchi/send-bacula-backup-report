@@ -83,6 +83,7 @@ Kern Sibbald for Bacula
 Eric Bollengier for Bweb  
 Willy Morin for template css  
 Victor Hugo dos Santos for jobs overview directly in the subject  
+Marcin Haba for baculum fix  
 Every Bacula contributor  
 
 
