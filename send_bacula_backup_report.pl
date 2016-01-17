@@ -47,7 +47,6 @@ $dbh = DBI->connect("DBI:$db_type:database=$db_name;host=$db_host", "$db_usernam
 
 # get the jobs in the time requested. starttime = '0000-00-00 00:00:00' or null is for waiting jobs.
 
-#TODO: anche in mysql, metti che se "endtime is null", invece dello starttime? starttime = 000 va bene su mysql?
 if ($db_type eq 'mysql') {
         $sth_list_jobs = $dbh->prepare("SELECT Job.JobId AS jobid, Client.Name AS client, FileSet.FileSet AS fileset, Job.Name AS jobname, Level AS level, StartTime AS starttime, EndTime AS endtime, JobFiles AS jobfiles, JobBytes AS jobbytes, JobStatus AS jobstatus,  SEC_TO_TIME(UNIX_TIMESTAMP(EndTime) - UNIX_TIMESTAMP(StartTime)) AS duration, JobErrors AS joberrors  FROM Client, Job  LEFT JOIN FileSet  ON (Job.FileSetId = FileSet.FileSetId) WHERE Client.ClientId=Job.ClientId AND ( UNIX_TIMESTAMP(starttime) > ( UNIX_TIMESTAMP(NOW()) - ($jobs_since_seconds)  ) OR starttime = '0000-00-00 00:00:00' ) ORDER BY JobStatus, JobErrors DESC ");
 } else {

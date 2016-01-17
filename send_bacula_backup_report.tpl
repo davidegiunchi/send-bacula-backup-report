@@ -43,7 +43,7 @@
 <td style="padding-left: 3px; padding-right: 3px;" classname="dataTD7"><TMPL_VAR NAME=JobFiles></td>
 <td style="padding-left: 3px; padding-right: 3px;" classname="dataTD8"><TMPL_VAR NAME=JobBytes></td>
 <td style="padding-left: 3px; padding-right: 3px;" classname="dataTD9"><TMPL_VAR NAME=Errors></td>
-<td style="padding-left: 3px; padding-right: 3px;" classname="dataTD10"><a href="<TMPL_VAR NAME=Bweb_Path>?action=job_zoom;jobid=<TMPL_VAR NAME=JobId>"><TMPL_VAR NAME=Status></a></td>
+<td style="padding-left: 3px; padding-right: 3px;" classname="dataTD10"><a href="<TMPL_VAR NAME=Bweb_Path>?open=Job&id=<TMPL_VAR NAME=JobId>"><TMPL_VAR NAME=Status></a></td>
 
 </tr>
 </TMPL_LOOP>

@@ -10,7 +10,7 @@ $db_name='bacula';
 $db_username='root';
 $db_password='xxxxxxxx';
 # url to bweb.pl or your bacula's web interface. If you don't have a web interface, you can skip it
-$bweb_path='http://hostname.or.ip.of.the.bacula.dir/cgi-bin/bweb/bweb.pl';
+$bweb_path='http://hostname.or.ip.of.the.bacula.dir/';
 # email arguments
 $email_from='backup@domain.com';
 $email_to='ced@domain.com';
