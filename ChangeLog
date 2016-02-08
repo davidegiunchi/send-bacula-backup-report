@@ -1,5 +1,5 @@
 
-17/01/2016      Davide Giunchi
+09/02/2016      Davide Giunchi
 
         * v0.6: new feature for minimum job size check
         * subject shortening: don't print the status if the job-count is equal to zero
